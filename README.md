@@ -2,7 +2,7 @@
 **A Simple and Beautiful Minecraft Launcher, Still on developing.**
 
 _`Language:English`_
-_[`切换到中文`]()_
+_[`切换到中文`](https://github.com/FutureStudios-FSC/FSL-Launcher/README-cn.md)_
 
 > **Important! This version is unfinished. That means there are a lot of things dosen't work.**
 
