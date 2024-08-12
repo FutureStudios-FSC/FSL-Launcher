@@ -2,7 +2,7 @@
 **一个简洁、美观的Minecraft（我的世界）启动器，正在开发中。**
 
 _`语言：中文`_
-_[`Switch to English`](https://github.com/FutureStudios-FSC/FSL-Launcher/README.md)_
+_[`Switch to English`](https://github.com/FutureStudios-FSC/FSL-Launcher/blob/master/README.md)_
 
 > **重要提示！该版本还没有开发完成，这意味着会出现某些部分无法使用的状况！**
 
