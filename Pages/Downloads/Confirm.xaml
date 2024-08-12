@@ -1,0 +1,17 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FSL.Pages.Downloads"
+      xmlns:hc="https://handyorg.github.io/handycontrol" x:Class="FSL.Pages.Downloads.Confirm"
+      mc:Ignorable="d" 
+      d:DesignHeight="315" d:DesignWidth="611"
+      Title="Confirm">
+
+    <Grid>
+        <Label x:Name="label" Content="确认安装" Height="38" Margin="0,10,0,0" VerticalAlignment="Top" Width="591"/>
+        <TextBox HorizontalAlignment="Center" Height="60" Margin="0,67,0,0" TextWrapping="Wrap" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Title="安装路径" VerticalAlignment="Top" Width="591"/>
+        <Button x:Name="back" Content="&lt;    返回" HorizontalAlignment="Left" Height="37" Margin="10,268,0,0" VerticalAlignment="Top" Width="78" Click="back_Click"/>
+    </Grid>
+</Page>

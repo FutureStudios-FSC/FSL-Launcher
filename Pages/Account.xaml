@@ -1,0 +1,39 @@
+﻿<Page x:Class="FSL.Pages.Account"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      xmlns:local="clr-namespace:FSL.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="434.76" d:DesignWidth="668"
+      Title="Account"  AllowDrop="True">
+
+    <Grid AllowDrop="True">
+        <hc:Card Margin="18,10,19,10">
+            <StackPanel>
+                <StackPanel Height="322" Margin="10,0,8,0">
+                    <ComboBox x:Name="accountCombo" Margin="0,20,0,0" Height="55" Width="278" Style="{StaticResource ComboBoxExtend}" hc:InfoElement.Title="验证方式" SelectionChanged="accountCombo_SelectionChanged">
+                        <ComboBoxItem Content="离线验证"/>
+                        <ComboBoxItem Content="Microsoft 正版登录"/>
+                        <ComboBoxItem Content="第三方 Authlib Injector"/>
+                        <ComboBoxItem Content="第三方 统一通行证"/>
+                    </ComboBox>
+                    <ContentControl x:Name="content" Content="请先选择验证方式，然后继续...&#xD;&#xA;将按钮拖动到此窗口来加载AuthlibInjector验证！" Height="227" Width="327" Margin="0,10,0,0"/>
+                </StackPanel>
+            </StackPanel>
+            <hc:Card.Header>
+                <StackPanel Margin="10" Width="300">
+                    <!--Card 的一级内容-->
+                    <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
+       Text="账户" 
+       HorizontalAlignment="Center" TextAlignment="Center"/>
+                    <!--Card 的二级内容-->
+                    <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
+       Text="配置游戏账户，正版或离线、第三方等" Margin="0,6,0,0"
+       HorizontalAlignment="Center" TextAlignment="Center"/>
+                </StackPanel>
+            </hc:Card.Header>
+        </hc:Card>
+    </Grid>
+</Page>

@@ -1,0 +1,48 @@
+﻿<Page
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FSL.Pages"
+      xmlns:hc="https://handyorg.github.io/handycontrol" x:Class="FSL.Pages.Home"
+      mc:Ignorable="d" 
+      d:DesignHeight="434.76" d:DesignWidth="668"
+    
+      Title="Home">
+
+    <Grid>
+
+        <hc:Card Margin="18,10,19,217">
+            <StackPanel Height="127" Margin="10,0,8,0">
+                <Label Content="这是FSL的开发版本，所以会分发给一些特殊人群，&#xA;当然啦，你们的任务就是找问题...&#xD;&#xA;当然，核心也会出现一些不可避免的缺陷" Height="93" Width="634" BorderBrush="{x:Null}"/>
+            </StackPanel>
+            <hc:Card.Header>
+                <StackPanel Margin="10" Width="300">
+                    <!--Card 的一级内容-->
+                    <TextBlock TextWrapping="NoWrap"  Style="{DynamicResource TextBlockLargeBold}" TextTrimming="CharacterEllipsis" 
+                                       Text="欢迎" 
+                                       HorizontalAlignment="Center" TextAlignment="Center"/>
+                    <!--Card 的二级内容-->
+                    <TextBlock TextWrapping="NoWrap" Style="{DynamicResource TextBlockDefault}" TextTrimming="CharacterEllipsis" 
+                                       Text="查看公告和启动游戏！注意啦，启动要双击..." Margin="0,6,0,0"
+                                       HorizontalAlignment="Center" TextAlignment="Center"/>
+                </StackPanel>
+            </hc:Card.Header>
+        </hc:Card>
+        <hc:SplitButton x:Name="START" Style="{StaticResource SplitButtonPrimary}" Margin="0,0,19,44" VerticalAlignment="Bottom" Height="60" Width="236" HorizontalAlignment="Right" MouseDoubleClick="START_Click">
+            <hc:SplitButton.DropDownContent>
+                <StackPanel>
+                    <hc:TextBox Margin="5,0,5,0"  x:Name="gcInput" TextChanged="gcInput_TextChanged" />
+                    <ListBox x:Name="STARTdropdown" BorderThickness="0" SelectionChanged="STARTdropdown_SelectionChanged"/>
+                </StackPanel>
+            </hc:SplitButton.DropDownContent>
+            <StackPanel>
+                <TextBlock Text="启动 Minecraft" FontSize="18" HorizontalAlignment="Center" Foreground="White" />
+                <TextBlock x:Name="gamecore" HorizontalAlignment="Center" Margin="0,5,0,0" Foreground="White" Text="请选择游戏核心..."/>
+            </StackPanel>
+        </hc:SplitButton>
+        <Button x:Name="gcRefresh" Content="刷 新" HorizontalAlignment="Stretch" Margin="329,329,260,0" VerticalAlignment="Top" Height="60" Click="gcRefresh_Click"/>
+        <hc:CircleProgressBar x:Name="progress" HorizontalAlignment="Left" Height="73" Margin="192,318,0,0" VerticalAlignment="Top" Width="73"/>
+        <hc:ChatBubble x:Name="progressText" Content="启动时将显示进度！" HorizontalAlignment="Left" Height="40" Margin="44,275,0,0" VerticalAlignment="Top" Width="172"/>
+    </Grid>
+</Page>

@@ -1,0 +1,20 @@
+﻿<Page x:Class="FSL.Pages.Accounts.Offline"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:hc="https://handyorg.github.io/handycontrol"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FSL.Pages.Accounts"
+      mc:Ignorable="d" 
+      d:DesignHeight="227" d:DesignWidth="327"
+      Title="Offline">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="name" Height="60" Margin="0,19,0,0" TextWrapping="Wrap" Text="FSL_Player" VerticalAlignment="Top" Style="{StaticResource TextBoxExtend}" hc:InfoElement.Title="账户名" TextChanged="TextBox_TextChanged" HorizontalAlignment="Center" Width="263"/>
+        <Label Content="请注意！离线玩家将无法加入大部分服务器&#xD;&#xA;如果条件允许，强烈建议购买正版Minecraft&#xD;&#xA;来获得完整体验，支持开发者" Height="77" Margin="0,94,0,0" VerticalAlignment="Top" Width="263"/>
+
+    </Grid>
+</Page>

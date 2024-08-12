@@ -1,0 +1,61 @@
+﻿<hc:Window x:Class="FSL.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FSL"
+        mc:Ignorable="d"
+        Background="{DynamicResource BackgroundBrush}"
+        NonClientAreaBackground="#FF00A8FF"
+        NonClientAreaForeground="#FFFFFF"
+        CloseButtonForeground="#FFFFFF"
+        OtherButtonForeground="#FFFFFF"
+        OtherButtonHoverForeground="#FFFFFF"
+        ShowTitle="False"
+        Title="FSL Launcher RH" Height="450" Width="800" ResizeMode="CanMinimize" Icon="/icon.png" AllowDrop="True">
+    <hc:Window.NonClientAreaContent>
+        <StackPanel VerticalAlignment="Stretch" Height="40" Orientation="Horizontal" IsHitTestVisible="False">
+            
+            <TextBlock x:Name="TitleBox" Margin="15,0,0,0" Text="{Binding Title, RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" Foreground="White" FontSize="14" VerticalAlignment="Center"/>
+            <TextBlock Margin="15,0,0,0" Foreground="White" FontSize="10" VerticalAlignment="Center" Text="v1.0 indev"/>
+        
+        </StackPanel>
+    </hc:Window.NonClientAreaContent>
+    <Grid>
+        <ContentControl Name="Content" Margin="132,0,0,0" Height="435" VerticalAlignment="Top"/>
+        <hc:SideMenu BorderThickness="1" Margin="0,0,668,0" AutoSelect="True">
+            <hc:Interaction.Triggers>
+                <hc:EventTrigger EventName="SelectionChanged">
+                    <hc:EventToCommand Command="{Binding SwitchItemCmd}" PassEventArgsToCommand="True" />
+                </hc:EventTrigger>
+            </hc:Interaction.Triggers>
+            <hc:SideMenuItem Header="主页" Selected="HomepageSEL_Selected">
+                <hc:SideMenuItem.Icon>
+                    <Image Source="http://xxag.top/FSC%20Statics/Misc/Image/home.png" Width="24" Height="24"/>
+                </hc:SideMenuItem.Icon>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="下载" Selected="DownloadSEL_Selected">
+                <hc:SideMenuItem.Icon>
+                    <Image Source="http://xxag.top/FSC%20Statics/Misc/Image/download.png" Width="24" Height="24"/>
+                </hc:SideMenuItem.Icon>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="账户" Selected="AccountSEL_Selected">
+                <hc:SideMenuItem.Icon>
+                    <Image Source="http://xxag.top/FSC Statics/Misc/Image/account.png" Width="24" Height="24"/>
+                </hc:SideMenuItem.Icon>
+            </hc:SideMenuItem>
+            <hc:SideMenuItem Header="设置" Selected="SettingsSEL_Selected">
+                        <hc:SideMenuItem.Icon>
+                            <Image Source="http://xxag.top/FSC%20Statics/Misc/Image/settings.png" Width="24" Height="24"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+            <hc:SideMenuItem Header="关于" Selected="AboutSEL_Selected">
+                        <hc:SideMenuItem.Icon>
+                            <Image Source="http://xxag.top/FSC%20Statics/Misc/Image/about.png" Width="24" Height="24"/>
+                        </hc:SideMenuItem.Icon>
+                    </hc:SideMenuItem>
+        </hc:SideMenu>
+
+    </Grid>
+</hc:Window>
